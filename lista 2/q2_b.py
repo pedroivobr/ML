@@ -13,6 +13,8 @@ for i in range(10000):
     x[i] = uniform(0,4*pi)
     y[i] = (math.cos(2*pi*x[i])/(1 - 16*x[i]*x[i]))*math.sin(pi*x[i])/(pi*x[i])
     
+x = np.array(x)
+y = np.array(y)
 
 X_train, X_test, y_train, y_test = train_test_split(x, y, test_size=0.3, random_state=1)
 
